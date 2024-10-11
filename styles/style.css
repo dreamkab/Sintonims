@@ -11,6 +11,38 @@
   font-style: normal;
 }
   
+.dp-purple{
+  background-color: #e6ccff;
+}
+.dp-light-purple{
+  background-color: #f0e0ff;
+}
+
+.dp-orange{
+background-color: #fcddbf;
+}
+.dp-light-orange{
+  background-color: #f8e6d4;
+  }
+  
+.dp-blue{
+  background-color: #b3ccff;
+}
+.dp-light-blue{
+  background-color: #dfe9ff;
+}
+
+.dp-pink{
+  background-color: #ffccff;
+}
+.dp-light-pink{
+  background-color: #fce5fc;
+}
+
+.dp-round{
+  border-radius: 10px;
+}
+
 h1 {
     font-family: "Lobster", sans-serif;
     font-size: 60px;
@@ -36,7 +68,11 @@ h1 {
     font-size: 40px;
     text-align: center;
   }
-  
+  h6 {
+    font-family: "Lobster", sans-serif;
+    font-size: 40px;
+    text-align: center;
+  }
   p,
   li {
     font-family: "Play", serif;
