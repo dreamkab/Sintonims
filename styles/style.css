@@ -11,85 +11,105 @@
   font-style: normal;
 }
   
-.dp-purple{
+.dp-top-bottom{
   background-color: #e6ccff;
 }
-.dp-light-purple{
-  background-color: #f0e0ff;
+
+/* фиолетовые оттенки */
+.dp-purple-color-1{
+  background-color: #efdeff;
+}
+.dp-purple-color-2{
+  background-color: #f4e8ff;
+}
+.dp-purple-color-3{
+  background-color: #f5eaff;
 }
 
-.dp-orange{
-background-color: #fcddbf;
+/* оранжевый для 2 книги */
+.dp-orange-color-1{
+  background-color: #ffc9c1;
 }
-.dp-light-orange{
-  background-color: #f8e6d4;
-  }
+.dp-orange-color-2{
+  background-color: #ffecea;
+}
   
-.dp-blue{
-  background-color: #b3ccff;
+/* синий для 3 книги */
+.dp-blue-color-1{
+  background-color: #848bc9;
 }
-.dp-light-blue{
-  background-color: #dfe9ff;
-}
-
-.dp-pink{
-  background-color: #ffccff;
-}
-.dp-light-pink{
-  background-color: #fce5fc;
+.dp-blue-color-2{
+  background-color: #cdd1f6;
 }
 
-.dp-round{
-  border-radius: 10px;
+/* голубой для 4 книги */
+.dp-lightblue-color-1{
+  background-color: #a2b8d9;
+}
+.dp-lightblue-color-2{
+  background-color: #e0edff;
 }
 
-h1 {
-    font-family: "Lobster", sans-serif;
-    font-size: 60px;
-    text-align: center;
-  }
-  h2 {
-    font-family: "Lobster", sans-serif;
-    font-size: 40px;
-    text-align: center;
-  }
-  h3 {
-    font-family: "Lobster", sans-serif;
-    font-size: 40px;
-    text-align: center;
-  }
-  h4 {
-    font-family: "Lobster", sans-serif;
-    font-size: 40px;
-    text-align: center;
-  }
-  h5 {
-    font-family: "Lobster", sans-serif;
-    font-size: 40px;
-    text-align: center;
-  }
-  h6 {
-    font-family: "Lobster", sans-serif;
-    font-size: 40px;
-    text-align: center;
-  }
-  p,
-  li {
+.dp-image-left-round{
+  border-radius: 60px 20px 20px 60px;
+}
+.dp-text-left-round{
+  border-radius: 0px 20px 20px 0px;
+}
+.dp-image-right-round{
+  border-radius: 20px 60px 60px 20px;
+}
+.dp-text-right-round{
+  border-radius: 20px 0px 0px 20px;
+}
+
+p,li {
     font-family: "Play", serif;
-    font-size: 16px;
-    line-height: 2;
-    letter-spacing: 1px;
-  }
-  html {
-    background-color: #EEEBF3;
-  }
-  body {
-    width: 600px;
-    margin: 0 auto;
-    padding: 0 20px 20px 20px;
-  }
-  img {
-    display: block;
-    margin: 0 auto;
-  }
- 
+    font-size: 36px;
+    letter-spacing: 1px;}
+
+ul li {
+    display: inline-block; /* Отображать как строчный элемент */
+    margin-right: 5px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */}
+
+a{text-decoration: none;}
+
+p.text{text-align: center;}
+
+html {background-color: #EEEBF3;}
+
+body {
+    width: 1920px;
+    line-height: 1.5;
+    text-align: left;}
+img.left {
+    display: inline;
+    float: left;
+    padding: 30px;}
+img.right {
+    display: inline;
+    float: right;
+    padding: 30px;}
+.nav{
+    height: 240px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;}
+nav-list{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;}
+div.container{
+  width: 100%;
+  height: 240px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;}
+
+div.nav-menu{height: 100%;}
+.lob{
+  font-family: 'Lobster';
+  font-size: 60px;}
