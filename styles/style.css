@@ -18,7 +18,7 @@ body {
 }
 
 ul li a {
-  color: #1a1a1a;
+  color: #110c0c;
   text-decoration: none;
 }
 
@@ -33,16 +33,24 @@ html{
 
 
 .back_top1{
-  background-color: #7e7a7d57;
+  background-color: #99959896;
 }
 .back_top2{
-  background-color: #f7eff54b;
+  background-color: #f7eff580;
 }
+.back{
+  background-color: #e796a4a6;
+}
+
 
 .bk-img{
   border-radius: 10px;
   width: 350px;
   height: 500px;
+}
+.img{
+  border-radius: 10px;
+  height: 350px;
 }
 
 .container{
@@ -73,10 +81,7 @@ html{
   color: #f2f2f2;
   text-decoration: none;
 }
-.topnav a:hover {
-  background-color: #6d6169;
-  color: black;
-}
+
 .topnav p{
   font-size: 60px;
   font-family: 'Lobster';
@@ -105,5 +110,5 @@ html{
 }
 
 .blur{
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
 }
