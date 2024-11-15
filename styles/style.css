@@ -9,43 +9,49 @@
 
 .top-background{
   background-image: url(/images/book_background.png);
+  height: 650px;
 }
 
 .logo{
-  width: 10cqw;
-  padding: 0.5em;
+  width: 100px;
+  margin-top: 14px;
 }
 
 .navigation-top{
   p{
     color:rgb(255, 240, 246);
     font-family: 'Lobster';
-    font-size: 3cqw;  
+    font-size: 34px;  
   }
   a{
   color: rgb(255, 240, 246);
   font-family: 'Lobster';
-  font-size: 3cqw;
+  font-size: 34px;
   text-decoration: none;
   }
 }
 .navigation-mid{
-  li{
+  li{   
     display: inline-block;
     margin-right: 2em;
   }
 }
 .navigation-bot{
   background-color: #353535;
+  height: 140px;
 }
 
+
+.list-m{
+  margin: 120px 0;
+}
 .list-top{
   li{
     list-style-type: none;
   }
   a{
   font-family: 'Play';
-  font-size: 1.9cqw;
+  font-size: 20px;
   text-decoration: none;
   color: rgb(255, 240, 246);
   }
@@ -54,7 +60,7 @@
   margin: 0px 10px;
   p{
     font-family: 'Lobster';
-    font-size: 3cqw;
+    font-size: 34px;
     margin: 15px;
     color: rgb(255, 181, 191);
   }
@@ -66,13 +72,13 @@
 
 .medina-top{
   font-family: 'Lobster';
-  font-size: 3cqw;
+  font-size: 40px;
   color: rgb(255, 181, 191);
   text-align: center;
 }
 .medina-bot{
   font-family: 'Play';
-  font-size: 1.6cqw;
+  font-size: 20px;
   text-decoration: none;
   color: rgb(255, 240, 246);
 }
@@ -92,17 +98,104 @@
 
 .main-top-text{
   font-family: 'Lobster';
-  font-size: 3cqw;
+  font-size: 40px;
   margin: 0;
   text-align: center;
   color: #ff5f81;
 }
 .main-bot-text{
   font-family: 'Play';
-  font-size: 1.6cqw;
+  font-size: 20px;
   color:#58474b;
 }
 .main-img{
   width: 15cqw;
   border-radius: 5%;
+}
+
+@media only screen and (max-width : 3840px){
+
+}
+@media only screen and (max-width : 2560px){
+
+}
+@media only screen and (max-width : 1920px) {
+
+}
+@media only screen and (max-width : 1680px) {
+
+}
+@media only screen and (max-width : 1366px) {
+
+}
+@media only screen and (max-width : 1280px) {
+  .top-background{
+    height: 500px;
+  }
+  .navigation-top{
+    a{
+      font-size: 24px;
+    }
+    p{
+      font-size: 24px;
+    }
+  }
+  .navigation-bot{
+    height: 100px;
+  }
+
+  .list-m{
+    margin: 80px 0;
+  }
+  .list-top{
+    a{
+    font-size: 18px;
+    }
+  }
+  .list-mid{
+    p{
+      font-size: 24px;
+    }
+  }
+
+  .main-top-text{
+    font-size: 28px;
+  }
+  .main-bot-text{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .logo{
+    width: 70px;
+  }
+  .navigation-bot{
+    height: 100px;
+  }
+}
+@media only screen and (max-width : 800px)  {
+
+}
+@media only screen and (max-width : 768px)  {
+
+}
+@media only screen and (max-width : 600px)  {
+.navigation-top{
+  a{display: none;}
+}
+}
+@media only screen and (max-width : 533px)  {
+
+}
+@media only screen and (max-width : 360px)  {
+
+}
+@media only screen and (max-width : 320px)  {
+
+}
+@media only screen and (max-width : 240px)  {
+
+}
+@media only screen and (max-width : 176px)  {
+
 }
