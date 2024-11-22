@@ -1,44 +1,138 @@
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items:stretch;
-  gap: 2em;
-  flex-basis: auto;
+/* Контейнер для навигации */
+.container {
+  display: flex; /* Используем flexbox для расположения элементов */
+  flex-direction: row; /* Горизонтальное расположение */
+  justify-content: space-evenly; /* Равномерное распределение пространства между элементами */
+  align-items: stretch; /* Элементы растягиваются по высоте */
+  gap: 2em; /* Промежуток между элементами */
+  flex-basis: auto; /* Автоматическое значение базового размера */
 }
 
-.top-background{
-  background-image: url(/images/book_background.png);
-  height: 650px;
+/* Фоновое изображение для верхней части */
+.top-background {
+  background-image: url(/images/book_background.png); /* Указываем изображение фона */
+  height: 650px; /* Высота фона */
 }
 
-.logo{
-  width: 100px;
-  margin-top: 14px;
+/* Логотип */
+.logo {
+  width: 100px; /* Ширина логотипа */
+  margin-top: 14px; /* Отступ сверху */
 }
 
+/* Стили для заголовка в навигационном меню */
+.nav-title {
+  color: rgb(255, 240, 246); /* Цвет текста */
+  font-family: 'Lobster', sans-serif; /* Шрифт */
+  font-size: 34px; /* Размер шрифта */
+  height: 34px;
+  margin-top: 45px;
+  margin-bottom: 0px;
+}
+
+/* Стили для ссылок в навигационном меню */
 .navigation-top{
-  p{
-    color:rgb(255, 240, 246);
-    font-family: 'Lobster';
-    font-size: 34px;  
-  }
-  a{
-  color: rgb(255, 240, 246);
-  font-family: 'Lobster';
-  font-size: 34px;
+  margin-top: 45px;
+}
+.navigation-top a {
+  color: rgb(255, 240, 246); /* Цвет текста */
+  font-family: 'Lobster', sans-serif; /* Шрифт */
+  font-size: 34px; /* Размер шрифта */
+  text-decoration: none; /* Убираем подчеркивание */
+}
+.navigation-top p{
+  color: rgb(255, 240, 246); /* Цвет текста */
+  font-family: 'Lobster', sans-serif; /* Шрифт */
+  font-size: 34px; /* Размер шрифта */
+}
+
+/* Стили для навигационного меню */
+.navigation-mid li {
+  display: inline-block; /* Отображение элементов списка в строку */
+  margin-right: 2em; /* Отступ между элементами списка */
+}
+
+/* Нижняя навигация */
+.navigation-bot {
+  background-color: #353535; /* Цвет фона */
+  height: 130px; /* Высота навигации */
+}
+
+
+
+:root {
+  --burger-width: 40px; /* Ширина бургер-меню */
+  --burger-height: 50px; /* Высота бургер-меню */
+  --line-height: 4px; /* Высота линий бургер-меню */
+  --nav-background: #f4f4f4; /* Фоновый цвет навигации */
+  --line-color: #e6426b; /* Цвет линий бургер-меню */
+  --nav-transition-duration: 0.2s; /* Длительность анимации */
+  --nav-z-index: 1000; /* Z-индекс для навигации */
+}
+
+.menu {
+  position: relative;
+}
+#menu-toggle {
+  display: none; /* Скрыть чекбокс */
+}
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  margin: 40px;
+}
+.burger span {
+  background: var(--line-color);
+  height: var(--line-height);
+  margin: 3px 0;
+  transition: all var(--nav-transition-duration) ease;
+}
+.navigation {
+  display: flex;
+  position: absolute;
+  background: var(--nav-background);
+  top: 100px; /* Расположение меню под бургером */
+  width: 180px;
+  left: 50;
+  right: 20px;
+  z-index: var(--nav-z-index); /* Убедитесь, что навигация поверх других элементов */
+}
+
+#menu-toggle:checked + .burger span:nth-child(1) {
+  transform: rotate(45deg);
+  margin: 0; /* Убираем отступ */
+}
+#menu-toggle:checked + .burger span:nth-child(2) {
+  transform: rotate(-45deg);
+  margin: 0; /* Убираем отступ */
+}
+#menu-toggle:checked + .burger span:nth-child(3) {
+  opacity: 0; /* Скрываем нижнюю линию */
+}
+
+
+#menu-toggle:checked ~ .navigation {
+  display: block; /* Показываем навигацию при активном бургер-меню */
+}
+
+
+.nav-list {
+  text-align: center;
+  list-style: none;
+  padding: 0; /* Убираем отступы по умолчанию */
+  margin: 0; /* Убираем маргины по умолчанию */
+}
+.nav-list li {
+  padding: var(--nav-item-padding);
+  border-bottom: 1px solid var(--nav-border-color);
+}
+.nav-list a {
   text-decoration: none;
-  }
-}
-.navigation-mid{
-  li{   
-    display: inline-block;
-    margin-right: 2em;
-  }
-}
-.navigation-bot{
-  background-color: #353535;
-  height: 140px;
+  color: var(--line-color);
+  display: block; /* Делаем ссылки блочными для удобства нажатия */
 }
 
 
@@ -70,6 +164,7 @@
   border-radius: 20px;
 }
 
+
 .medina-top{
   font-family: 'Lobster';
   font-size: 40px;
@@ -81,7 +176,36 @@
   font-size: 20px;
   text-decoration: none;
   color: rgb(255, 240, 246);
+  margin: 20px;
 }
+.medina-img{
+  height: 200px;
+}
+.med-img{
+  border-radius: 80%;
+  width: 300px;
+  margin-left: 40px;
+  margin-top: 50px;
+}
+.med-top-text{
+  font-family: 'Lobster';
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  color: #ff5f81;
+}
+.med-bot-text{
+  font-family: 'Play';
+  font-size: 20px;
+  color:#58474b;
+}
+.med-list{
+  margin-top: 100px;
+}
+.med-text{
+  margin-top: 50px;
+}
+
 
 .main-top{
   background-color: rgba(243, 178, 178, 0.329);
@@ -109,12 +233,23 @@
   color:#58474b;
 }
 .main-img{
-  width: 15cqw;
+  width: 180px;
   border-radius: 5%;
 }
 
 @media only screen and (max-width : 3840px){
-
+  .navigation {
+    display: none; /* Скрыть навигацию по умолчанию */
+  }
+  #menu-toggle:checked ~ .navigation {
+  display: block; /* Показываем навигацию при активном бургер-меню */
+  }
+  .burger{
+    display: none;
+  }
+  .main-nav{
+    display: inline;
+  }
 }
 @media only screen and (max-width : 2560px){
 
@@ -128,20 +263,36 @@
 @media only screen and (max-width : 1366px) {
 
 }
-@media only screen and (max-width : 1280px) {
+@media only screen and (max-width : 1280px) and (orientation: landscape) {
   .top-background{
     height: 500px;
   }
   .navigation-top{
-    a{
-      font-size: 24px;
-    }
-    p{
-      font-size: 24px;
-    }
+    font-size: 24px;
   }
   .navigation-bot{
     height: 100px;
+  }
+  .nav-title{
+    height: 24px;
+    margin-top: 30px;
+  }
+
+  .medina-top{
+    font-size: 34px;
+  }
+  .medina-bot{
+    font: 18px;
+  }
+  .med-img{
+    width: 240px;
+  }
+  .med-list{
+    margin-top: 80px;
+  }
+
+  .logo{
+    margin-top: 0;
   }
 
   .list-m{
@@ -164,25 +315,60 @@
   .main-bot-text{
     font-size: 16px;
   }
+
+  .burger{
+    display: flex;
+  }
+  .main-nav{
+    display: none;
+  }
 }
-@media only screen and (max-width : 1024px) {
+@media only screen and (max-width : 1024px) and (orientation: landscape) {
+  .med-list{
+    margin-top: 65px;
+  }
+  .navigation-top{
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width : 1024px) and (orientation: portrait) {
   .logo{
     width: 70px;
   }
+
   .navigation-bot{
     height: 100px;
   }
+  .main-bot-text{
+    font-size: 10px;
+  }
+  .main-img{
+    width: 200px;
+    border-radius: 10px;
+  }
+  .burger{
+    display: flex;
+  }
+  .navigation {
+    display: none; /* Скрыть навигацию по умолчанию */
+  }
+  #menu-toggle:checked ~ .navigation {
+  display: block; /* Показываем навигацию при активном бургер-меню */
+  }
 }
-@media only screen and (max-width : 800px)  {
-
+@media only screen and (max-width : 800px) and (orientation: landscape) {
+  .medina-bot{
+    font-size: 16px;
+  }
+  .med-bot-text{
+    font-size: 16px;
+  }
 }
 @media only screen and (max-width : 768px)  {
 
 }
-@media only screen and (max-width : 600px)  {
-.navigation-top{
-  a{display: none;}
-}
+@media only screen and (max-width: 600px) {
+
 }
 @media only screen and (max-width : 533px)  {
 
